@@ -1,70 +1,105 @@
-# Guy Kiri — Personal Website
+<div align="center">
 
-Personal portfolio built with **React + Vite**. Dark, elegant theme with full
-**RTL/LTR** support (Hebrew / English) and client-side routing.
+# Guy Kiri — Personal Portfolio
 
-## Stack
+A dark, elegant, fully **bilingual (Hebrew / English)** portfolio website
+with complete **RTL ⇄ LTR** support.
 
-- React 18 + Vite 5
-- React Router (HashRouter — works on GitHub Pages with no 404 redirect hack)
-- i18n via a small React context (`src/i18n/`)
-- Plain CSS with design tokens + logical properties (auto-mirrors in RTL)
+[**🌐 View the live site**](https://guykiri123.github.io/guy-kiri-website/)
 
-## Develop
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-6-CA4245?logo=reactrouter&logoColor=white)
+![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed-GitHub_Pages-222222?logo=github&logoColor=white)
+
+</div>
+
+---
+
+## ✨ Features
+
+- **Bilingual (HE / EN)** with full **RTL ⇄ LTR** mirroring — the entire layout
+  flips automatically using CSS logical properties, with the language saved to
+  `localStorage` and auto-detected from the browser.
+- **Centered, responsive navigation** that stays put when switching languages,
+  with a mobile burger menu.
+- **Working contact form** — submissions are emailed directly with no backend
+  (via [Web3Forms](https://web3forms.com), client-side), plus one-tap links to
+  Email, WhatsApp, LinkedIn and GitHub.
+- **Dark, minimal theme** with a warm gold accent, driven by design tokens
+  (CSS custom properties).
+- **Lightweight by design** — inline SVG icons and a custom i18n layer, no heavy
+  UI or icon libraries.
+- **Static SPA** auto-deployed to GitHub Pages on every push to `main`.
+
+## 🧱 Tech Stack
+
+| Area       | Choice                                            |
+| ---------- | ------------------------------------------------- |
+| Framework  | React 18                                          |
+| Build tool | Vite 5                                            |
+| Routing    | React Router 6 (`HashRouter`)                     |
+| i18n       | Custom React Context — [`src/i18n/`](src/i18n/)   |
+| Styling    | Plain CSS — design tokens + logical properties    |
+| Forms      | Web3Forms (client-side email, no server)          |
+| Hosting    | GitHub Pages via GitHub Actions                   |
+
+## 🚀 Getting Started
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
-```
-
-## Build
-
-```bash
-npm run build    # outputs to dist/
+npm run dev      # dev server → http://localhost:5173
+npm run build    # production build → dist/
 npm run preview  # preview the production build locally
 ```
 
-## Deploy to GitHub Pages
+> No test runner or linter is configured.
 
-1. **Set the base path.** In [`vite.config.js`](vite.config.js), set `repoName`
-   to your repository name. For a project site the site lives at
-   `https://<user>.github.io/<repo>/`, so `base` must be `/<repo>/`.
-   For a user site (`<user>.github.io`), set `repoName` so that `base` is `/`.
+## 🌍 Deployment
 
-2. **Automatic deploy (recommended).** A workflow is included at
-   [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). Push to
-   `main`, then in the repo go to **Settings → Pages → Build and deployment →
-   Source: GitHub Actions**. Every push to `main` builds and deploys.
+The site auto-deploys to **GitHub Pages** on every push to `main` via
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+One-time setup in the repo: **Settings → Pages → Source: GitHub Actions**.
 
-3. **Manual deploy (alternative).**
+> [!IMPORTANT]
+> **Base path coupling.** [`vite.config.js`](vite.config.js) sets
+> `base: '/<repoName>/'`, and `repoName` **must match the GitHub repo name** —
+> otherwise every asset 404s on the live site. If you rename or fork the repo
+> (or move it to a `<user>.github.io` user site, where `base` is `/`), update
+> `repoName` to match.
 
-   ```bash
-   npm run build
-   npx gh-pages -d dist     # or push dist/ to a gh-pages branch
-   ```
+Routing uses **`HashRouter`** on purpose, so deep links (e.g. `/#/about`)
+survive a refresh on GitHub Pages without needing a `404.html` redirect hack.
 
-## Filling in content
+## ✏️ Editing Content
 
-All text is placeholder only. Edit:
+Pages are data-driven: each declares a plain array at the top and maps over it,
+and all visible text goes through the `t()` translator. **To change content,
+edit data — not JSX.**
 
-- **Text strings** → [`src/i18n/translations.js`](src/i18n/translations.js)
-  (keep the same keys for both `en` and `he`).
-- **About data** (education, skills, experience) → arrays at the top of
-  [`src/pages/About.jsx`](src/pages/About.jsx).
-- **Projects** → array at the top of
-  [`src/pages/Projects.jsx`](src/pages/Projects.jsx).
-- **Contact details / social links** →
-  [`src/pages/Contact.jsx`](src/pages/Contact.jsx) and
-  [`src/components/Footer.jsx`](src/components/Footer.jsx).
+| What                                    | Where                                                                                                  |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| All text strings                        | [`src/i18n/translations.js`](src/i18n/translations.js) — keep the **same keys** under both `en` and `he` |
+| About (education, skills, experience)   | arrays at the top of [`src/pages/About.jsx`](src/pages/About.jsx)                                      |
+| Projects                                | array at the top of [`src/pages/Projects.jsx`](src/pages/Projects.jsx)                                 |
+| Contact links & social icons            | [`src/pages/Contact.jsx`](src/pages/Contact.jsx), [`src/components/Footer.jsx`](src/components/Footer.jsx) |
 
-Search the codebase for `TODO` to find every spot that needs real content.
+> Contact details and social links are already real. The portfolio copy
+> (Home / About / Projects) still uses placeholders — search the codebase for
+> `TODO` to find every spot that needs real content.
 
-## Structure
+## 📁 Project Structure
 
 ```
 src/
   components/   Navbar, Footer, ProjectCard, Icons
   pages/        Home, About, Projects, Contact
   i18n/         translations.js, LanguageContext.jsx
-  styles/       index.css (tokens/reset), App.css
+  styles/       index.css (tokens + reset), App.css
 ```
+
+---
+
+<div align="center">
+<sub>Built with React + Vite · Deployed on GitHub Pages</sub>
+</div>
