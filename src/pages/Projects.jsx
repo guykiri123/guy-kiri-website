@@ -1,37 +1,18 @@
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
+import cookingBookImg from '../assets/cookingbook-home.png'
 import './Projects.css'
 
-// TODO: replace with real projects. Add/remove cards as needed.
-// `code` / `demo` are optional — omit to hide that link.
+// Add/remove cards as needed. `code` / `demo` are optional — omit to hide that link.
+// `titleKey` / `descKey` point at translations so cards stay bilingual.
 const projects = [
   {
-    title: 'Project One',
-    description: 'Short description of the project — what it does and why it matters.',
-    tags: ['React', 'Vite'],
-    code: 'https://github.com/',
-    demo: '',
-  },
-  {
-    title: 'Project Two',
-    description: 'Short description of the project — what it does and why it matters.',
-    tags: ['Node.js', 'API'],
-    code: 'https://github.com/',
-    demo: 'https://example.com/',
-  },
-  {
-    title: 'Project Three',
-    description: 'Short description of the project — what it does and why it matters.',
-    tags: ['TypeScript', 'CSS'],
-    code: 'https://github.com/',
-    demo: '',
-  },
-  {
-    title: 'Project Four',
-    description: 'Short description of the project — what it does and why it matters.',
-    tags: ['React', 'UI'],
-    code: '',
-    demo: 'https://example.com/',
+    titleKey: 'projects.items.cookingBook.title',
+    descKey: 'projects.items.cookingBook.description',
+    image: cookingBookImg,
+    tags: ['React', 'Express', 'Claude AI', 'RTL'],
+    code: 'https://github.com/guykiri123/CookingBook',
+    demo: 'https://cookingbook-bf50.onrender.com',
   },
 ]
 
@@ -42,15 +23,15 @@ export default function Projects() {
     <section className="page section">
       <div className="container">
         <header className="projects__head">
-          <p className="eyebrow">{t('projects.title')}</p>
           <h1 className="section-title">{t('projects.title')}</h1>
-          {/* TODO: real subtitle */}
-          <p className="lead">{t('projects.subtitle')}</p>
         </header>
 
         <div className="projects__grid">
           {projects.map((p, i) => (
-            <ProjectCard key={i} project={p} />
+            <ProjectCard
+              key={i}
+              project={{ ...p, title: t(p.titleKey), description: t(p.descKey) }}
+            />
           ))}
         </div>
       </div>

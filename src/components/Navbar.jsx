@@ -5,6 +5,7 @@ import './Navbar.css'
 
 const links = [
   { to: '/', key: 'nav.home', end: true },
+  { to: '/who-am-i', key: 'nav.whoami' },
   { to: '/about', key: 'nav.about' },
   { to: '/projects', key: 'nav.projects' },
   { to: '/contact', key: 'nav.contact' },

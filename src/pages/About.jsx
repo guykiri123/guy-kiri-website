@@ -31,10 +31,7 @@ export default function About() {
     <section className="page section">
       <div className="container">
         <header className="about__head">
-          <p className="eyebrow">{t('about.title')}</p>
           <h1 className="section-title">{t('about.title')}</h1>
-          {/* TODO: real personal summary */}
-          <p className="lead">{t('about.summary')}</p>
         </header>
 
         <div className="about__grid">

@@ -24,7 +24,8 @@ export const translations = {
     // ---- Navbar ----
     nav: {
       home: 'Home',
-      about: 'About',
+      whoami: 'Who Am I?',
+      about: 'Technical Details',
       projects: 'Projects',
       contact: 'Contact',
       switchLang: 'Switch language',
@@ -33,7 +34,7 @@ export const translations = {
     // ---- Home / Hero ----
     home: {
       // TODO: real headline / name styling if needed
-      greeting: 'Hello, I am',
+      greeting: 'Nice to meet you, I am',
       name: 'Guy Kiri',
       role: 'Full Stack Developer', // TODO: real role / tagline
       tagline: 'I build clean, elegant web experiences.', // TODO: real subtitle
@@ -41,12 +42,14 @@ export const translations = {
       ctaSecondary: 'Get in touch',
     },
 
+    // ---- Who Am I ----
+    whoami: {
+      title: 'Want to know who I am?',
+    },
+
     // ---- About ----
     about: {
-      title: 'About',
-      // TODO: real personal summary
-      summary:
-        'Short personal summary goes here. Describe who you are, what you do, and what you care about as a developer.',
+      title: 'A bit of technical info about me',
       educationTitle: 'Education',
       // TODO: fill education entries in About.jsx data array
       skillsTitle: 'Technical Skills',
@@ -56,16 +59,21 @@ export const translations = {
 
     // ---- Projects ----
     projects: {
-      title: 'Projects',
-      subtitle: 'A selection of personal projects.', // TODO
+      title: 'My Personal Projects',
       viewCode: 'Code',
       viewDemo: 'Live Demo',
+      items: {
+        cookingBook: {
+          title: 'Cooking Book',
+          description:
+            'An interactive recipe-management app powered by AI. Search recipes in natural language, ask the chef (Claude) for real-time cooking advice, scale portions on the fly, and view calculated nutrition. Built with React 19 and an Express backend with user management, powered by Claude AI.',
+        },
+      },
     },
 
     // ---- Contact ----
     contact: {
-      title: 'Contact',
-      subtitle: "Let's work together.",
+      title: "Let's work together",
       orReach: 'Reach me directly:',
       // call-to-action above the form
       formHeading: 'Want me to reach out to you?',
@@ -98,7 +106,8 @@ export const translations = {
     // ---- Navbar ----
     nav: {
       home: 'בית',
-      about: 'אודות',
+      whoami: 'מי אני?',
+      about: 'פרטים טכניים עלי',
       projects: 'פרויקטים',
       contact: 'צור קשר',
       switchLang: 'החלפת שפה',
@@ -107,7 +116,7 @@ export const translations = {
     // ---- Home / Hero ----
     home: {
       // TODO: כותרת / טקסט אמיתי
-      greeting: 'שלום, אני',
+      greeting: 'נעים להכיר, אני',
       name: 'גיא קירי',
       role: 'מפתח Full Stack', // TODO: תפקיד אמיתי
       tagline: 'בונה חוויות ווב נקיות ואלגנטיות.', // TODO: תת-כותרת אמיתית
@@ -115,12 +124,14 @@ export const translations = {
       ctaSecondary: 'צרו קשר',
     },
 
+    // ---- Who Am I ----
+    whoami: {
+      title: 'רוצים לדעת מי אני?',
+    },
+
     // ---- About ----
     about: {
-      title: 'אודות',
-      // TODO: תקציר אישי אמיתי
-      summary:
-        'כאן יופיע תקציר אישי קצר. תארו מי אתם, במה אתם עוסקים, ומה חשוב לכם כמפתחים.',
+      title: 'קצת מידע טכני עליי',
       educationTitle: 'השכלה',
       // TODO: מלאו את פרטי ההשכלה במערך הנתונים ב-About.jsx
       skillsTitle: 'כישורים טכניים',
@@ -130,16 +141,21 @@ export const translations = {
 
     // ---- Projects ----
     projects: {
-      title: 'פרויקטים',
-      subtitle: 'מבחר פרויקטים אישיים.', // TODO
+      title: 'פרוייקטים אישיים שלי',
       viewCode: 'קוד',
       viewDemo: 'דמו חי',
+      items: {
+        cookingBook: {
+          title: 'ספר המתכונים',
+          description:
+            'אפליקציית ניהול מתכונים אינטראקטיבית מבוססת בינה מלאכותית. חיפוש מתכונים בשפה טבעית, שאלות לשף (Claude) בזמן אמת, שינוי גודל מנה אוטומטי וחישוב ערכים תזונתיים. נבנתה עם React 19 ושרת Express הכולל ניהול משתמשים, מבוססת Claude AI.',
+        },
+      },
     },
 
     // ---- Contact ----
     contact: {
-      title: 'צור קשר',
-      subtitle: 'בואו נעבוד יחד.',
+      title: 'בואו נעבוד יחד',
       orReach: 'צרו איתי קשר ישירות:',
       // call-to-action above the form
       formHeading: 'רוצים שאחזור אליכם?',

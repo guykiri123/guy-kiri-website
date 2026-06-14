@@ -4,14 +4,19 @@ import './ProjectCard.css'
 
 export default function ProjectCard({ project }) {
   const { t } = useLanguage()
-  const { title, description, tags, code, demo } = project
+  const { title, description, tags, code, demo, image } = project
 
   return (
     <article className="card">
-      {/* TODO: replace with real project image (src in public/ or imported asset) */}
-      <div className="card__thumb" aria-hidden="true">
-        <span className="card__thumb-mark">{title?.[0] ?? '·'}</span>
-      </div>
+      {image ? (
+        <div className="card__thumb">
+          <img className="card__img" src={image} alt={title} loading="lazy" />
+        </div>
+      ) : (
+        <div className="card__thumb" aria-hidden="true">
+          <span className="card__thumb-mark">{title?.[0] ?? '·'}</span>
+        </div>
+      )}
 
       <div className="card__body">
         {/* TODO: real project title */}

@@ -64,9 +64,7 @@ export default function Contact() {
     <section className="page section">
       <div className="container">
         <header className="contact__head">
-          <p className="eyebrow">{t('contact.title')}</p>
           <h1 className="section-title">{t('contact.title')}</h1>
-          <p className="lead">{t('contact.subtitle')}</p>
         </header>
 
         {/* ---- Direct links (GitHub, LinkedIn, Email, WhatsApp) ---- */}
