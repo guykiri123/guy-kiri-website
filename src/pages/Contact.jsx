@@ -3,11 +3,10 @@ import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { GithubIcon, LinkedinIcon, MailIcon } from '../components/Icons.jsx'
 import './Contact.css'
 
-// TODO: replace with real contact details.
 const contacts = [
-  { label: 'Email', value: 'hello@example.com', href: 'mailto:hello@example.com', Icon: MailIcon },
-  { label: 'LinkedIn', value: 'linkedin.com/in/username', href: 'https://www.linkedin.com/', Icon: LinkedinIcon },
-  { label: 'GitHub', value: 'github.com/username', href: 'https://github.com/', Icon: GithubIcon },
+  { label: 'Email', value: 'guykiri123@gmail.com', href: 'mailto:guykiri123@gmail.com', Icon: MailIcon },
+  { label: 'LinkedIn', value: 'linkedin.com/in/guy-kiri-438927411', href: 'https://www.linkedin.com/in/guy-kiri-438927411/', Icon: LinkedinIcon },
+  { label: 'GitHub', value: 'github.com/guykiri123', href: 'https://github.com/guykiri123', Icon: GithubIcon },
 ]
 
 export default function Contact() {
@@ -44,7 +43,6 @@ export default function Contact() {
                     </span>
                     <span className="contact__item-text">
                       <span className="contact__item-label">{label}</span>
-                      {/* TODO: real value */}
                       <span className="contact__item-value">{value}</span>
                     </span>
                   </a>

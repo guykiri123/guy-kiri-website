@@ -2,11 +2,10 @@ import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { GithubIcon, LinkedinIcon, MailIcon } from './Icons.jsx'
 import './Footer.css'
 
-// TODO: replace href values with real profiles / email.
 const socials = [
-  { label: 'GitHub', href: 'https://github.com/', Icon: GithubIcon },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/', Icon: LinkedinIcon },
-  { label: 'Email', href: 'mailto:hello@example.com', Icon: MailIcon },
+  { label: 'GitHub', href: 'https://github.com/guykiri123', Icon: GithubIcon },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/guy-kiri-438927411/', Icon: LinkedinIcon },
+  { label: 'Email', href: 'mailto:guykiri123@gmail.com', Icon: MailIcon },
 ]
 
 export default function Footer() {
