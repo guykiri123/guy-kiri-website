@@ -65,17 +65,24 @@ export const translations = {
     // ---- Contact ----
     contact: {
       title: 'Contact',
-      subtitle: "Let's work together.", // TODO
+      subtitle: "Let's work together.",
+      orReach: 'Reach me directly:',
+      // call-to-action above the form
+      formHeading: 'Want me to reach out to you?',
+      formSubheading: "Leave your details and I'll get back to you soon.",
       // form
-      nameLabel: 'Name',
-      namePlaceholder: 'Your name',
+      nameLabel: 'Full name',
+      namePlaceholder: 'Your full name',
+      phoneLabel: 'Phone number',
+      phonePlaceholder: 'Your phone number',
       emailLabel: 'Email',
       emailPlaceholder: 'you@example.com',
       messageLabel: 'Message',
-      messagePlaceholder: 'Write your message…',
-      send: 'Send Message',
-      sentNote: 'This form is a UI demo only — no message is actually sent.',
-      orReach: 'Or reach me directly:',
+      messagePlaceholder: 'Anything you’d like to add…',
+      send: 'Send',
+      sending: 'Sending…',
+      sentNote: 'Thanks! Your message has been sent — I’ll get back to you soon.',
+      errorNote: 'Something went wrong. Please try again, or email me directly.',
     },
 
     // ---- Footer ----
@@ -132,17 +139,24 @@ export const translations = {
     // ---- Contact ----
     contact: {
       title: 'צור קשר',
-      subtitle: 'בואו נעבוד יחד.', // TODO
+      subtitle: 'בואו נעבוד יחד.',
+      orReach: 'צרו איתי קשר ישירות:',
+      // call-to-action above the form
+      formHeading: 'רוצים שאחזור אליכם?',
+      formSubheading: 'השאירו פרטים ואחזור אליכם בהקדם.',
       // form
-      nameLabel: 'שם',
-      namePlaceholder: 'השם שלך',
+      nameLabel: 'שם מלא',
+      namePlaceholder: 'השם המלא שלך',
+      phoneLabel: 'מספר טלפון',
+      phonePlaceholder: 'מספר הטלפון שלך',
       emailLabel: 'אימייל',
       emailPlaceholder: 'you@example.com',
-      messageLabel: 'הודעה',
-      messagePlaceholder: 'כתבו את ההודעה שלכם…',
-      send: 'שליחת הודעה',
-      sentNote: 'הטופס הוא הדגמת ממשק בלבד — לא נשלחת הודעה בפועל.',
-      orReach: 'או צרו איתי קשר ישירות:',
+      messageLabel: 'תוכן ההודעה',
+      messagePlaceholder: 'מה תרצו להוסיף?…',
+      send: 'שליחה',
+      sending: 'שולח…',
+      sentNote: 'תודה! ההודעה נשלחה — אחזור אליכם בהקדם.',
+      errorNote: 'משהו השתבש. נסו שוב, או שלחו לי מייל ישירות.',
     },
 
     // ---- Footer ----
