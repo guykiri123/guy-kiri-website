@@ -1,0 +1,16 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__main {
+  flex: 1;
+  /* offset for the fixed navbar */
+  padding-top: var(--nav-h);
+}
+
+/* Page wrapper shared by all routed pages */
+.page {
+  animation: fade-up 0.5s var(--ease) both;
+}

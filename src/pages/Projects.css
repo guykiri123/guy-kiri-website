@@ -1,0 +1,10 @@
+.projects__head {
+  max-width: 720px;
+  margin-block-end: 48px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}

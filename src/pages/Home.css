@@ -1,0 +1,72 @@
+.home {
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home__inner {
+  position: relative;
+  text-align: center;
+  padding-block: 80px;
+}
+
+/* Soft accent glow behind the hero */
+.home__glow {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  width: min(680px, 90vw);
+  height: min(680px, 90vw);
+  background: radial-gradient(circle, var(--accent-glow), transparent 65%);
+  filter: blur(20px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.home__title {
+  font-size: clamp(3rem, 11vw, 6.5rem);
+  line-height: 1;
+  margin-block: 8px 0;
+  background: linear-gradient(180deg, var(--text) 35%, var(--accent-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home__role {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 600;
+  color: var(--accent);
+  margin-block-start: 14px;
+}
+
+.home__tagline {
+  margin-block-start: 18px;
+  margin-inline: auto;
+}
+
+.home__cta {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-block-start: 40px;
+}
+
+.icon-inline {
+  transition: transform var(--t-fast) var(--ease);
+}
+/* Flip the arrow to follow reading direction in RTL */
+[dir='rtl'] .icon-inline {
+  transform: scaleX(-1);
+}
+.btn--primary:hover .icon-inline {
+  transform: translateX(3px);
+}
+[dir='rtl'] .btn--primary:hover .icon-inline {
+  transform: scaleX(-1) translateX(3px);
+}
