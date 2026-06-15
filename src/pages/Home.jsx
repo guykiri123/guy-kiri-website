@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { ArrowIcon } from '../components/Icons.jsx'
+import ResumeButton from '../components/ResumeButton.jsx'
 import './Home.css'
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
           <Link to="/contact" className="btn btn--ghost">
             {t('home.ctaSecondary')}
           </Link>
+          <ResumeButton variant="ghost" />
         </div>
       </div>
     </section>

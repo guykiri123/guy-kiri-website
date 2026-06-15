@@ -30,15 +30,14 @@
   font-weight: 700;
 }
 .nav__brand-mark {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* gold backing shows through the avatar's transparent edges, keeping the
+     original brand-mark colour */
   background: linear-gradient(150deg, var(--accent), #9c7f44);
-  color: #1a1408;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
+  box-shadow: 0 0 0 1px var(--border-soft);
 }
 .nav__brand-name {
   font-size: 1.05rem;

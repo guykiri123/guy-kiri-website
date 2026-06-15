@@ -3,6 +3,14 @@
   margin-block-end: 56px;
 }
 
+.about__summary {
+  margin-block-start: 8px;
+}
+
+.about__resume {
+  margin-block-start: 22px;
+}
+
 .about__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -24,6 +32,70 @@
   font-size: 1.25rem;
   margin-block-end: 20px;
   color: var(--text);
+}
+
+/* ---- Grouped skills ---- */
+.about__skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+.about__skill-group {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+.about__skill-label {
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* education subjects, one per line */
+.about__subjects {
+  display: grid;
+  gap: 7px;
+  margin-block-start: 10px;
+}
+.about__subject {
+  position: relative;
+  padding-inline-start: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.about__subject::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* hobbies — label + line per category */
+.about__interests {
+  display: grid;
+  gap: 14px;
+}
+.about__interest {
+  display: grid;
+  gap: 2px;
+}
+.about__interest-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent-soft);
+}
+.about__interest-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* ---- Skill badges ---- */

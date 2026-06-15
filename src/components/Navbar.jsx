@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
+import avatarMark from '../assets/avatar-mark.png'
 import './Navbar.css'
 
 const links = [
@@ -25,7 +26,7 @@ export default function Navbar() {
     <header className="nav">
       <div className="container nav__inner">
         <NavLink to="/" className="nav__brand" aria-label={t('brand.name')}>
-          <span className="nav__brand-mark">GK</span>
+          <img className="nav__brand-mark" src={avatarMark} alt="" aria-hidden="true" />
           <span className="nav__brand-name">{t('brand.name')}</span>
         </NavLink>
 

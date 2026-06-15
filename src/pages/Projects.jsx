@@ -1,6 +1,7 @@
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
 import cookingBookImg from '../assets/cookingbook-home.png'
+import chordsilImg from '../assets/chordsil-home.png'
 import './Projects.css'
 
 // Add/remove cards as needed. `code` / `demo` are optional — omit to hide that link.
@@ -13,6 +14,14 @@ const projects = [
     tags: ['React', 'Express', 'Claude AI', 'RTL'],
     code: 'https://github.com/guykiri123/CookingBook',
     demo: 'https://cookingbook-bf50.onrender.com',
+  },
+  {
+    titleKey: 'projects.items.chordsil.title',
+    descKey: 'projects.items.chordsil.description',
+    image: chordsilImg,
+    tags: ['UX/UI', 'Product Planning', 'Music'],
+    // No code link — I led the product & design, not the implementation.
+    demo: 'https://chordsil.com/',
   },
 ]
 

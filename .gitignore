@@ -8,3 +8,7 @@ dist-ssr
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Heavy source/working files — kept locally, not used by the build
+pictures/
+/המלצה גיא קירי - צהל.pdf
